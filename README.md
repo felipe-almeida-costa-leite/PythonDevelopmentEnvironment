@@ -44,20 +44,21 @@ Será utilizado os seguintes pacotes:
 Todo projeto baseado neste "framework", terá a segunda estrutura:
 ```
 Root
-   |- README.md
-   |- .venv
    |- .flake8
    |- .gitignore
    |- .pre-commit-config.yaml
+   |- .pydocstyle.ini
    |- .pylintrc
+   |- conftest.py
+   |- mypy.ini
+   |- LICENSE
+   |- README.md
    |- requirements.txt
    |- src
    |   |-- main
    |       |-- code.py
    |   |-- test
    |       |-- code_test.py
-   |- setup
-   |   |-- setup.py
    |- build
    |   |-- project.zip
 ```

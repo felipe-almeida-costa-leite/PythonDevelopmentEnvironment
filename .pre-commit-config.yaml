@@ -4,7 +4,7 @@ repos:
     - id: black
       name: black
       language: system
-      entry: black src/
+      entry: bash -c 'source .venv/bin/activate && black src/'
       always_run: true
       pass_filenames: false
       stages: [commit]
@@ -13,7 +13,7 @@ repos:
     - id: flake8
       name: flake8
       language: system
-      entry: flake8 src/
+      entry: bash -c 'source .venv/bin/activate && flake8 src/'
       always_run: true
       pass_filenames: false
       stages: [commit]
@@ -22,7 +22,7 @@ repos:
     - id: pydocstyle
       name: pydocstyle
       language: system
-      entry: pydocstyle src/
+      entry: bash -c 'source .venv/bin/activate && pydocstyle src/'
       always_run: true
       pass_filenames: false
       stages: [commit]
@@ -31,7 +31,7 @@ repos:
     - id: mypy
       name: mypy
       language: system
-      entry: mypy src/
+      entry: bash -c 'source .venv/bin/activate && mypy src/'
       always_run: true
       pass_filenames: false
       stages: [commit]
@@ -40,7 +40,7 @@ repos:
     - id: pytest
       name: pytest
       language: system
-      entry: pytest -v
+      entry: bash -c 'source .venv/bin/activate && pytest -v'
       always_run: true
       pass_filenames: false
       stages: [commit]
