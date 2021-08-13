@@ -1,13 +1,12 @@
 # !/usr/bin/python3
 # encoding: ISO-8859-1
-"""
-Função criada para somar dois números
-"""
+"""Função criada para somar dois números."""
 
 
 def soma(num_1: int, num_2: int) -> int:
     """
     Retorna a soma de dois números.
+
         Parameters:
             :param num_1: Primeiro Numero da Soma
             :type num_1: int
