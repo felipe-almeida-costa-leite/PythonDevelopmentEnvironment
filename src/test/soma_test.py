@@ -10,5 +10,5 @@ def test_soma():
     """
     Testa a função soma
     """
-    result = soma(2, 3)
+    result: int = soma(2, 3)
     assert result == 5
