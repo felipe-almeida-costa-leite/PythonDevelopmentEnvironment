@@ -60,4 +60,4 @@ Root
    |   |-- project.zip
 ```
 ### Setup
-Esse programa visa realizar todo processo após o clone do repositório, além de desenvolver também um pacote python que provisiona todo o ambiente quando necessário.
+Esse programa visa realizar todo processo após o clone do repositório.
