@@ -37,6 +37,8 @@ Será utilizado os seguintes pacotes:
 * Pycodestyle - Validação da formatação do código;
 * Pydocstyle - Para garantir que seja feito a documentação;
 * MyPy - Forcar a tipagem estática do código;
+* Pytest - Para testar nosso código;
+* PyBuild - Para build do nosso código;
 * Pre-Commit - Para garantir que tudo seja feito antes de cada commit.
 ### Estrutura Diretório
 Todo projeto baseado neste "framework", terá a segunda estrutura:
