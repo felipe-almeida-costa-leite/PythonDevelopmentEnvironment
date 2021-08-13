@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # encoding: ISO-8859-1
 """
-Função criada para testar o schema de commit
+Função criada para somar dois números
 """
 
 
