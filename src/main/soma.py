@@ -17,7 +17,7 @@ def soma(num_1: int, num_2: int) -> int:
         :return soma_dois_numeros: Soma dos dois números
         :rtype soma_dois_numeros: int
 
-    Exemples:
+    Exemples
         >>> num_3 = 1
         >>> num_4 = 2
         >>> soma(num_1, num_2)
