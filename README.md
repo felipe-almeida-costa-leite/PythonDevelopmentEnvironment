@@ -9,16 +9,16 @@ O guia de instalação completo do wsl está disponível no link [WSL](https://d
 Processo de instalação:
 1. Habilite o WSL:
 
-    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 2. Habilite o recurso de VM:
-    
-    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 3. Baixe o pacote do kernerl do linux:
-    
-    https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+
+   https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 4. Selecione o WSL2 como default:
-    
-    wsl --set-default-version 2
+
+   wsl --set-default-version 2
 5. Abra a Microsoft Store e selecione uma distribuição linux.
 
 ### IDE
@@ -40,6 +40,8 @@ Será utilizado os seguintes pacotes:
 * Pytest - Para testar nosso código;
 * PyBuild - Para build do nosso código;
 * Pre-Commit - Para garantir que tudo seja feito antes de cada commit.
+  Para facilitar a criação do ambiente, baixe o pacote [pydenv](https://pypi.org/project/pydenv/) e faça o provisionamento
+  automático do ambiente.
 ### Estrutura Diretório
 Todo projeto baseado neste "framework", terá a segunda estrutura:
 ```
@@ -62,5 +64,36 @@ Root
    |- build
    |   |-- project.zip
 ```
-### Setup
-Esse programa visa realizar todo processo após o clone do repositório.
+### Boas práticas
+A ideia é seguir boas de desenvolvimento e ter elas relatadas aqui. Uma espécie de livro de tudo isso junto e aplicado.
+
+Como a utilização do Clean Code, Clean Architecture, SOLID, Design Patterns, TDD, JET e afins...
+
+
+#### Clean Code
+A ideia principal é ter um código bem escrito,
+no sentido de, imaginar que a leitura e entendimento do código seja possível em até 3 minutos.
+Para que isso seja possível é necessário definir algumas diretrizes para a escrita de código,
+que se extende desde nome de variáveis até quando transformar uma função em classe e afins....
+
+#### Variavéis
+#### Nome Significativo
+Os nomes de variavéis devem ser significativo e diretos ou seja, 
+você não precisa de mais nenhum elemento fora o nome da variavel para entender o quê ela está representando.
+Exemplos:
+* Mau:
+```python
+import datetime
+da = datetime.date.today().strftime("%y-%m-%d")
+```
+* Bom:
+```python
+import datetime
+
+data_atual_formato_americano = datetime.date.today().strftime("%y-%m-%d")
+data_atual_formato_brasileiro = datetime.date.today().strftime("%d/%m/%y")
+```
+Veja como os nomes das variaveis são claros. O primeiro exemplo tem um nome qualquer que necessita de conhecimento
+do módulo datetime para entender qual será o dado que a variavel da irá guardar, porém no segundo exemplo
+já não é necessário, apenas pelo nome já se sabe qual é o dado (data atual) e o formato ainda.
+#### Nome Significativo
